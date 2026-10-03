@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LLM-Konnect — Engineering & Architecture Showcase</title>
+  <meta name="description" content="Comprehensive technical architecture, code documentation, module deep dive, interactive verification labs, and viva voce defense guide for LLM-Konnect offline financial intelligence platform." />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="LLM-Konnect — Engineering & Architecture Showcase" />
+  <meta property="og:description" content="Offline-first financial analytics, deterministic KPI engine, verified report generator, and grounded RAG chatbot on consumer hardware." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?t=20261004_v2" />
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header-wrapper">
+    <div class="header-container">
+      <div class="brand" onclick="window.switchTab('overview')">
+        <div class="brand-icon">LK</div>
+        <div class="brand-text">
+          <span class="brand-title">LLM-Konnect</span>
+          <span class="brand-subtitle">Privacy-Preserving Offline Financial Platform</span>
+        </div>
+      </div>
+
+      <!-- Quick Global Search Bar -->
+      <div class="header-search">
+        <div class="search-input-box">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="global-search-input" placeholder="Search modules, files, formulas, viva... (Press /)" autocomplete="off" />
+          <span class="search-shortcut">/</span>
+        </div>
+      </div>
+
+      <!-- Header Controls -->
+      <div class="header-actions">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>100% Offline Active</span>
+        </div>
+
+        <button class="btn-icon" id="presentation-mode-btn" title="Toggle Presentation / Projector Mode">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </button>
+
+        <button class="btn-icon" id="theme-toggle-btn" title="Toggle Dark/Light Mode">
+          <svg id="theme-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <button class="btn-primary" style="padding: 0.45rem 1rem; font-size: 0.82rem;" onclick="window.switchTab('defense')">
+          Viva Defense
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Navigation Pills -->
+  <nav class="tabs-nav-bar">
+    <div class="tabs-container">
+      <button class="nav-tab-pill active" data-tab="overview">
+        <span>Overview & Scope</span>
+      </button>
+
+      <button class="nav-tab-pill" data-tab="modules">
+        <span>System Modules (6.1–6.10)</span>
+        <span class="nav-tab-badge">10 Modules</span>
+      </button>
+
+      <button class="nav-tab-pill" data-tab="code">
+        <span>Code Documentation</span>
+        <span class="nav-tab-badge">142 Files</span>
+      </button>
+
+      <button class="nav-tab-pill" data-tab="lab">
+        <span>Interactive Labs</span>
+        <span class="nav-tab-badge">4 Simulators</span>
+      </button>
+
+      <button class="nav-tab-pill" data-tab="benchmarks">
+        <span>Empirical Benchmarks</span>
+        <span class="nav-tab-badge">Req R14</span>
+      </button>
+
+      <button class="nav-tab-pill" data-tab="defense">
+        <span>Defense & Panel Q&A</span>
+        <span class="nav-tab-badge">25+ Qs</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Showcase Container -->
+  <main class="container">
+    
+    <!-- TAB 1: OVERVIEW & SCOPE -->
+    <section class="tab-pane active" id="tab-overview">
+      <div id="overview-content"></div>
+    </section>
+
+    <!-- TAB 2: SYSTEM MODULES DEEP DIVE (6.1 - 6.10) -->
+    <section class="tab-pane" id="tab-modules">
+      <div id="modules-content"></div>
+    </section>
+
+    <!-- TAB 3: CODE DOCUMENTATION CATEGORY -->
+    <section class="tab-pane" id="tab-code">
+      <div id="code-content"></div>
+    </section>
+
+    <!-- TAB 4: INTERACTIVE SIMULATION LABS -->
+    <section class="tab-pane" id="tab-lab">
+      <div id="lab-content"></div>
+    </section>
+
+    <!-- TAB 5: EMPIRICAL BENCHMARKS -->
+    <section class="tab-pane" id="tab-benchmarks">
+      <div id="benchmarks-content"></div>
+    </section>
+
+    <!-- TAB 6: DEFENSE & VIVA VOCE -->
+    <section class="tab-pane" id="tab-defense">
+      <div id="defense-content"></div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="brand">
+        <div class="brand-icon" style="width: 32px; height: 32px; font-size: 0.95rem;">LK</div>
+        <div>
+          <strong style="color: var(--text-primary); font-size: 0.95rem;">LLM-Konnect</strong>
+          <p class="footer-text">Privacy-Preserving Offline Financial & Operational Intelligence Platform</p>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+        <span class="proof-tag">Ollama Local Engine</span>
+        <span class="proof-tag">FastAPI & DuckDB</span>
+        <span class="proof-tag">Chroma Vector DB</span>
+        <span class="proof-tag">Tauri v2 + React 19</span>
+        <span class="proof-tag">AES-256-GCM At-Rest</span>
+      </div>
+
+      <div class="footer-text">
+        Privacy-Preserving Financial & Operational Intelligence Platform · Engineering Showcase
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="projectData.js?t=20261004_v2"></script>
+  <script src="app.js?t=20261004_v2"></script>
+</body>
+</html>
